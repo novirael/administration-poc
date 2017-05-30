@@ -4,7 +4,9 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 urlpatterns = [
-    url(r'^$', TemplateView.as_view(template_name='base.html')),
     url(r'^admin/', admin.site.urls),
     url(r'^api/administration/v1/', include('administration.urls'), name='administration_api'),
+    url(r'^api/inventory/v1/', include('inventory.urls'), name='inventory_api'),
+
+    url(r'^.*$', TemplateView.as_view(template_name='base.html')),
 ]

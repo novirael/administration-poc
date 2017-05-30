@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'administration',
+    'inventory',
 ]
 
 MIDDLEWARE = [
@@ -132,5 +133,8 @@ STATICFILES_DIRS = (
 )
 
 REST_FRAMEWORK = {
-    'PAGE_SIZE': 25
+    'PAGE_SIZE': 25,
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.AllowAny',
+    ),
 }
