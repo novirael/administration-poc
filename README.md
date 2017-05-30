@@ -1,2 +1,2 @@
-# administration-poc
-Proof of Concept for SPA administration panel
+# django-redux-example
+Proof of Concept for SPA django + redux app
